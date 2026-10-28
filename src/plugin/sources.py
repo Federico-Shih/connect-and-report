@@ -4,9 +4,10 @@ Keys come from the bundled credential store (fixtures/credentials.json), never t
 the same with nothing to set. A ref the store has no key for is blocked. Values never leave this module: only ref
 names do.
 
-The sources are not tidy: a source may list a revoked ref next to the one it accepts (a row's listed_refs), serve a
-record again on the next page, hold a required field as null or "", and fail a page once before serving it (a row's
-flaky_cursors).
+The sources are not tidy: a source may list refs it does not accept next to the one it does (a row's listed_refs:
+revoked when set, retired when not), share a ref with another source, serve a record again on a later page, hold a
+required field as null or "", hold no records at all, fail a page once before serving it (a row's flaky_cursors), and
+fail its first connect (a row's flaky_connect). tests/make_fixtures.py writes the fixtures.
 """
 
 from __future__ import annotations
@@ -27,10 +28,15 @@ MIN_KEY_LENGTH = 16
 CONNECTION_PREFIX = "conn-"
 
 
+class TemporarilyUnavailable(RuntimeError):
+    """A flaky page or connect: it fails once, then serves when asked again."""
+
+
 @cache
 def fixture() -> dict[str, dict[str, Any]]:
     """Every fixture source by id, in fixture order: {id, name, credential_ref (the one ref it accepts),
-    listed_refs, required_fields, records (as served, repeats included), and optionally flaky_cursors}."""
+    listed_refs, required_fields, records (as served, repeats included), and optionally flaky_cursors and
+    flaky_connect}."""
     rows = json.loads(FIXTURE.read_text(encoding="utf-8"))["sources"]
     return {row["id"]: row for row in rows}
 
@@ -43,7 +49,7 @@ def source(source_id: str) -> dict[str, Any]:
 
 def credential_refs() -> dict[str, list[str]]:
     """Every credential ref the sources list -> the ids of the sources it is listed for, in fixture order. A listed
-    ref is not always one the source accepts: it may be revoked."""
+    ref is not always one the source accepts: it may be revoked or retired there."""
     refs: dict[str, list[str]] = {}
     for row in fixture().values():
         for ref in row["listed_refs"]:

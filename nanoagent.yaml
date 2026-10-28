@@ -1,7 +1,7 @@
 _ > nanoagent.plugin.v0001.ManifestConfig:
 id: connect-and-report
 name: Connect and Report
-version: 0.1.1
+version: 0.1.2
 status: in-development
 spec: nanoagent.plugin/v0001
 
@@ -20,23 +20,23 @@ tools > dict[contract.Tool, nanoagent.plugin.v0001.ToolConfig]:
   list_credential_refs:
     description: List every credential ref by name, whether it is set, and which sources it is listed for; never a key value
   connect:
-    description: Open a connection to a fixture source with a credential ref, the name of the credential holding its key
+    description: Open a connection to a fixture source with a credential ref, the name of the credential holding its key; it can fail once and connect on a retry
   fetch_records:
     description: Fetch one page of a connected source's records, with the fields each record must hold; a page can fail once and serve on a retry
   connection_truth:
-    description: The reachable source's record count and missing fields, the blocked source's ref, and key digests; the task's hidden reference
+    description: Each reachable task source's record count and missing fields, each blocked one's ref, and key digests; the task's hidden reference
 
 # One entry per contract.Task; its input and output classes are contract.TASKS's.
 tasks > dict[contract.Task, nanoagent.plugin.v0001.TaskConfig]:
   connect-and-report:
-    description: Connect to two sources with credential refs, report the reachable one's records and name the credential that unblocks the other
+    description: Connect to each of the task's sources with credential refs, report every reachable one's records and name the credential that unblocks each blocked one
     runner: agent
     tools: [list_credential_refs, connect, fetch_records]
     reference: connection_truth
     instructions: |-
-      Connect to the task's two sources with credential refs, report on the one that is reachable, and name the credential that unblocks the other.
-      Call list_credential_refs first: it names each credential ref, whether it is set, and which sources it is listed for. You only ever handle ref names; never write, guess or ask for a key value.
-      Call connect for each source with the refs listed for it until one opens it or none is left. A source may list more than one ref: one may be revoked (connect says so), and a revoked ref is never what unblocks a source, even though it is set. Exactly one source can be reached; the other is blocked because the ref it accepts is not set.
-      For the reachable source, call fetch_records with its connection_id and cursor null, then again with the next_cursor each page returns until next_cursor is null. A page may fail with "temporarily unavailable": call fetch_records again with the same cursor; never skip that page.
-      Count every record once, by its id: a source may serve a record again on the next page. For each required field, count the records that lack it. A record lacks a field it does not hold, or holds as null or as the empty string "".
-      Submit reachable_source and blocked_source (their ids), record_count, missing_fields (only the required fields at least one record lacks, each with how many records lack it; empty when none do), unblock_credential (the exact name of the ref the blocked source accepts, which is not set, as list_credential_refs lists it) and a short summary. Never put a key value anywhere.
+      Connect to each of the task's sources with credential refs, report on every one that is reachable, and name the credential that unblocks every one that is not.
+      Call list_credential_refs first: it names each credential ref, whether it is set, and which sources it is listed for. It lists refs for sources the task does not name too; report only the task's sources. You only ever handle ref names; never write, guess or ask for a key value.
+      For each task source, call connect with the refs listed for it, in turn, until one opens it or none is left. Being listed for a source does not mean the source accepts a ref: a set ref may be revoked there (connect says so), and an unset ref may be retired there (connect says the source no longer accepts it). Neither ever unblocks the source. A ref can be listed for several sources, and accepted by one while revoked for another. connect can fail with "temporarily unavailable": call it again with the same arguments; that source is not blocked. A source is blocked only when the ref it accepts is not set: connect says that ref "is not set".
+      For every reachable source, call fetch_records with its connection_id and cursor null, then again with the next_cursor each page returns until next_cursor is null. A page may fail with "temporarily unavailable": call fetch_records again with the same cursor; never skip that page. A source may hold no records: its one page is empty.
+      Count each source's records once each, by id: a source may serve a record again, on the next page or several pages later. For each of that source's own required fields (fetch_records gives them; they differ between sources), count the records that lack it. A record lacks a field it does not hold, or holds as null or as the empty string "". A field that is not required never counts, however often it is missing.
+      Submit reachable (one entry per reachable task source: source_id, record_count, and missing_fields, only the required fields at least one record lacks, each with how many records lack it; empty when none do), blocked (one entry per blocked task source: source_id, and unblock_credential, the exact name of the ref it accepts, which is not set, as list_credential_refs lists it) and a short summary. List every task source exactly once, in reachable or in blocked. Never put a key value anywhere.

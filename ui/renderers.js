@@ -4,7 +4,7 @@
 // a renderer, `(value, {task, verdict, send}) => Element`, built from ./kit/components.js:
 //
 //   import { h } from "./kit/components.js";
-//   export default { ReportOutput: (report) => h("p", { text: `${report.record_count} records` }) };
+//   export default { ReportOutput: (report) => h("p", { text: `${report.reachable.length} reachable` }) };
 //
 // `send(text)` sends a message as if the person typed it, e.g. from a button on the result.
 export default {};

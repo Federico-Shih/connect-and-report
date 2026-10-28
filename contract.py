@@ -32,19 +32,29 @@ class MissingField(Output):
 
 @dataclass
 class ReportInput(Output):
-    sources: Annotated[list[str], "The two source ids to connect to: one is reachable, the other is blocked"]
+    sources: Annotated[list[str], "The source ids to connect to, two or more: each is either reachable or blocked"]
+
+
+@dataclass
+class SourceReport(Output):
+    source_id: Annotated[str, "The id of a source a connection was opened to"]
+    record_count: Annotated[int, "How many records it holds, over every page, each id once"]
+    missing_fields: Annotated[
+        list[MissingField],
+        "Each of its required fields that at least one of its records lacks, with how many lack it; empty when none do",
+    ]
+
+
+@dataclass
+class BlockedSource(Output):
+    source_id: Annotated[str, "The id of a source no connection could be opened to"]
+    unblock_credential: Annotated[str, "The exact credential ref NAME a person must set to unblock it"]
 
 
 @dataclass
 class ReportOutput(Output):
-    reachable_source: Annotated[str, "The id of the source a connection was opened to"]
-    record_count: Annotated[int, "How many records the reachable source holds, over every page, each id once"]
-    missing_fields: Annotated[
-        list[MissingField],
-        "Each required field that at least one record lacks, with how many records lack it; empty when none do",
-    ]
-    blocked_source: Annotated[str, "The id of the source no connection could be opened to"]
-    unblock_credential: Annotated[str, "The exact credential ref NAME a person must set to unblock it"]
+    reachable: Annotated[list[SourceReport], "Every task source a connection was opened to, each once"]
+    blocked: Annotated[list[BlockedSource], "Every task source no connection could be opened to, each once"]
     summary: Annotated[str, "One or two sentences for a person; never a key value"]
 
 
@@ -52,7 +62,9 @@ class ReportOutput(Output):
 class CredentialRef(Output):
     name: Annotated[str, CREDENTIAL_REF]
     is_set: Annotated[bool, "Whether a key is provisioned for it"]
-    sources: Annotated[list[str], "The ids of the sources this credential is listed for; a revoked one opens none"]
+    sources: Annotated[
+        list[str], "The ids of the sources this credential is listed for; a listed ref may be revoked or retired there"
+    ]
 
 
 @dataclass
@@ -62,7 +74,9 @@ class ListCredentialRefsInput(Output):
 
 @dataclass
 class ListCredentialRefsOutput(Output):
-    refs: Annotated[list[CredentialRef], "Every credential ref the fixture sources use, by name; values are never shown"]
+    refs: Annotated[
+        list[CredentialRef], "Every credential ref the fixture sources use, by name; values are never shown"
+    ]
 
 
 @dataclass
@@ -110,11 +124,8 @@ class KeyDigest(Output):
 
 @dataclass
 class ConnectionTruthOutput(Output):
-    reachable_source: Annotated[str, SOURCE_ID]
-    record_count: Annotated[int, "How many records the reachable source holds"]
-    missing_fields: Annotated[list[MissingField], "Each required field some records lack, by field name"]
-    blocked_source: Annotated[str, SOURCE_ID]
-    unblock_credential: Annotated[str, "The credential ref the blocked source needs"]
+    reachable: Annotated[list[SourceReport], "Each reachable task source's count and missing fields, in task order"]
+    blocked: Annotated[list[BlockedSource], "Each blocked task source and the ref it accepts, in task order"]
     keys: Annotated[list[KeyDigest], "Every set key's digest and length, never its value"]
 
 

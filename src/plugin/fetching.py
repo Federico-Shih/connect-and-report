@@ -6,12 +6,7 @@ from slimconfig import build_output
 
 from contract import FetchRecordsInput, FetchRecordsOutput, Record
 from plugin.engine import page
-from plugin.sources import PAGE_SIZE, connections, source
-
-
-class TemporarilyUnavailable(RuntimeError):
-    pass
-
+from plugin.sources import PAGE_SIZE, TemporarilyUnavailable, connections, source
 
 # workspace -> the (source id, cursor) pages that already failed once this run
 FAILED: dict[Path, set[tuple[str, str | None]]] = {}

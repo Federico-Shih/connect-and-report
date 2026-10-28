@@ -1,12 +1,12 @@
 _ > nanoagent.plugin.v0001.ProductConfig:
 tagline: "Connect to data sources with credential references, and learn exactly what is missing"
-summary: "Name two data sources. The agent connects to each with a credential reference, the name of the credential that holds its key, so it never handles a key. For the source it can reach, it retries a page that fails, counts every record once though the source serves one twice, and reports which required fields some records lack, empty values included. For the one it cannot, it names the exact credential a person must set, not the revoked one listed first. A deterministic check compares the report with the truth and fails any run that leaks a key."
+summary: "Name the data sources to check. The agent connects to each with a credential reference, the name of the credential that holds its key, so it never handles a key. For each source it can reach, it retries a connect or page that fails, counts every record once though some are served again, and reports which required fields some records lack, empty values included. For each it cannot, it names the exact credential a person must set, not a revoked or retired one listed before it. A deterministic check compares the report with the truth and fails any run that leaks a key."
 highlights:
   - "Keys stay inside the plugin: the agent sees credential names only"
   - "Built-in mock APIs, so every run is the same and needs no network"
   - "A leaked key fails the run, found by hash without the checker ever seeing it"
 steps:
-  - "Name the two sources: nothing to set up"
+  - "Name the sources: nothing to set up"
   - "The agent lists the credential refs and connects to each source"
-  - "It pages through the reachable source's records and finds the missing fields"
-  - "It reports the count, the missing fields and the credential that unblocks the other source"
+  - "It pages through each reachable source's records and finds the missing fields"
+  - "It reports each count and its missing fields, and the credential that unblocks each blocked source"

@@ -427,6 +427,1605 @@
     "CONNECT_REPORT_GLOBEX_KEY_LEGACY",
     "CONNECT_REPORT_GLOBEX_API_KEY"
    ]
+  },
+  {
+   "id": "initech-tickets",
+   "name": "Initech: IT help desk tickets",
+   "credential_ref": "CONNECT_REPORT_INITECH_API_KEY",
+   "listed_refs": [
+    "CONNECT_REPORT_INITECH_KEY_V1",
+    "CONNECT_REPORT_INITECH_API_KEY"
+   ],
+   "required_fields": [
+    "ticket_id",
+    "opened_at",
+    "status",
+    "priority",
+    "assignee",
+    "queue"
+   ],
+   "flaky_cursors": [
+    "cursor-20",
+    "cursor-50"
+   ],
+   "records": [
+    {
+     "id": "t-001",
+     "fields": {
+      "ticket_id": "INC-7101",
+      "opened_at": "2026-09-02T09:45:00Z",
+      "status": "pending",
+      "priority": "P3",
+      "assignee": "plawrence",
+      "queue": "printers",
+      "assignee_email": "",
+      "resolution_note": "rebooted"
+     }
+    },
+    {
+     "id": "t-002",
+     "fields": {
+      "ticket_id": "INC-7102",
+      "opened_at": "2026-09-03T13:00:00Z",
+      "status": "pending",
+      "priority": "P3",
+      "assignee": "jsmykowski",
+      "queue": "payroll",
+      "assignee_email": null,
+      "resolution_note": ""
+     }
+    },
+    {
+     "id": "t-003",
+     "fields": {
+      "ticket_id": "INC-7103",
+      "opened_at": "2026-09-04T14:15:00Z",
+      "status": "open",
+      "priority": "P3",
+      "assignee": "mbolton",
+      "queue": "network",
+      "assignee_email": "",
+      "resolution_note": "rebooted"
+     }
+    },
+    {
+     "id": "t-004",
+     "fields": {
+      "ticket_id": "INC-7104",
+      "opened_at": "2026-09-05T11:15:00Z",
+      "status": "pending",
+      "priority": "P2",
+      "assignee": "plawrence",
+      "queue": "payroll",
+      "assignee_email": "ntrent@initech.example",
+      "resolution_note": null
+     }
+    },
+    {
+     "id": "t-005",
+     "fields": {
+      "ticket_id": "INC-7105",
+      "opened_at": "2026-09-06T16:30:00Z",
+      "status": "open",
+      "priority": "P3",
+      "assignee": "ntrent",
+      "queue": "network",
+      "assignee_email": null,
+      "resolution_note": ""
+     }
+    },
+    {
+     "id": "t-006",
+     "fields": {
+      "ticket_id": "INC-7106",
+      "opened_at": "2026-09-07T05:45:00Z",
+      "status": "closed",
+      "priority": "P1",
+      "assignee": "slambert",
+      "assignee_email": "mbolton@initech.example"
+     }
+    },
+    {
+     "id": "t-007",
+     "fields": {
+      "ticket_id": "INC-7107",
+      "opened_at": "2026-09-08T03:15:00Z",
+      "status": "resolved",
+      "priority": "P1",
+      "assignee": "ntrent",
+      "queue": "facilities",
+      "assignee_email": "plawrence@initech.example"
+     }
+    },
+    {
+     "id": "t-008",
+     "fields": {
+      "ticket_id": "INC-7108",
+      "opened_at": "2026-09-09T01:45:00Z",
+      "status": "resolved",
+      "priority": "P3",
+      "assignee": "mbolton",
+      "queue": "printers",
+      "assignee_email": "",
+      "resolution_note": "rebooted"
+     }
+    },
+    {
+     "id": "t-009",
+     "fields": {
+      "ticket_id": "INC-7109",
+      "opened_at": "2026-09-10T13:30:00Z",
+      "status": "resolved",
+      "priority": "P3",
+      "assignee": "mbolton",
+      "queue": "payroll",
+      "resolution_note": "escalated"
+     }
+    },
+    {
+     "id": "t-010",
+     "fields": {
+      "ticket_id": "INC-7110",
+      "opened_at": "2026-09-11T09:45:00Z",
+      "status": "resolved",
+      "priority": "P2",
+      "assignee": "jsmykowski",
+      "queue": "facilities",
+      "assignee_email": "plawrence@initech.example",
+      "resolution_note": "escalated"
+     }
+    },
+    {
+     "id": "t-010",
+     "fields": {
+      "ticket_id": "INC-7110",
+      "opened_at": "2026-09-11T09:45:00Z",
+      "status": "resolved",
+      "priority": "P2",
+      "assignee": "jsmykowski",
+      "queue": "facilities",
+      "assignee_email": "plawrence@initech.example",
+      "resolution_note": "escalated"
+     }
+    },
+    {
+     "id": "t-011",
+     "fields": {
+      "ticket_id": "INC-7111",
+      "opened_at": "2026-09-12T19:00:00Z",
+      "status": "open",
+      "priority": "P2",
+      "assignee": "mbolton",
+      "queue": "printers",
+      "resolution_note": "rebooted"
+     }
+    },
+    {
+     "id": "t-012",
+     "fields": {
+      "ticket_id": "INC-7112",
+      "opened_at": "2026-09-13T16:45:00Z",
+      "status": "pending",
+      "priority": "P4",
+      "assignee": "plawrence",
+      "queue": "printers",
+      "assignee_email": "",
+      "resolution_note": "escalated"
+     }
+    },
+    {
+     "id": "t-013",
+     "fields": {
+      "ticket_id": "INC-7113",
+      "opened_at": "2026-09-14T16:45:00Z",
+      "status": "closed",
+      "priority": "P4",
+      "assignee": "mbolton",
+      "queue": null,
+      "assignee_email": "plawrence@initech.example",
+      "resolution_note": "duplicate"
+     }
+    },
+    {
+     "id": "t-014",
+     "fields": {
+      "ticket_id": "INC-7114",
+      "opened_at": "2026-09-15T10:15:00Z",
+      "status": "open",
+      "assignee": "plawrence",
+      "queue": "facilities",
+      "assignee_email": "ntrent@initech.example",
+      "resolution_note": "replaced toner"
+     }
+    },
+    {
+     "id": "t-015",
+     "fields": {
+      "ticket_id": "INC-7115",
+      "opened_at": "2026-09-16T08:45:00Z",
+      "status": "closed",
+      "priority": "P3",
+      "assignee": "ntrent",
+      "queue": "facilities",
+      "assignee_email": "plawrence@initech.example",
+      "resolution_note": "duplicate"
+     }
+    },
+    {
+     "id": "t-016",
+     "fields": {
+      "ticket_id": "INC-7116",
+      "opened_at": "2026-09-17T13:45:00Z",
+      "status": "open",
+      "priority": "P2",
+      "assignee": "ntrent",
+      "queue": "printers",
+      "assignee_email": "",
+      "resolution_note": "rebooted"
+     }
+    },
+    {
+     "id": "t-017",
+     "fields": {
+      "ticket_id": "INC-7117",
+      "opened_at": "2026-09-18T01:30:00Z",
+      "status": "open",
+      "priority": "P4",
+      "assignee": "jsmykowski",
+      "queue": "payroll",
+      "assignee_email": "",
+      "resolution_note": "duplicate"
+     }
+    },
+    {
+     "id": "t-018",
+     "fields": {
+      "ticket_id": "INC-7118",
+      "opened_at": "2026-09-19T22:45:00Z",
+      "status": "open",
+      "priority": "P4",
+      "assignee": "mbolton",
+      "queue": "network",
+      "assignee_email": null
+     }
+    },
+    {
+     "id": "t-019",
+     "fields": {
+      "ticket_id": "INC-7119",
+      "opened_at": "2026-09-20T22:30:00Z",
+      "status": "open",
+      "priority": "P1",
+      "queue": "network",
+      "assignee_email": "mbolton@initech.example",
+      "resolution_note": "escalated"
+     }
+    },
+    {
+     "id": "t-020",
+     "fields": {
+      "ticket_id": "INC-7120",
+      "opened_at": "2026-09-21T00:00:00Z",
+      "status": "open",
+      "priority": "P4",
+      "assignee": "plawrence",
+      "queue": "",
+      "assignee_email": "ntrent@initech.example",
+      "resolution_note": "rebooted"
+     }
+    },
+    {
+     "id": "t-021",
+     "fields": {
+      "ticket_id": "INC-7121",
+      "opened_at": "2026-09-22T03:45:00Z",
+      "status": "open",
+      "priority": "P1",
+      "assignee": "ntrent",
+      "queue": "facilities",
+      "assignee_email": "",
+      "resolution_note": "rebooted"
+     }
+    },
+    {
+     "id": "t-022",
+     "fields": {
+      "ticket_id": "INC-7122",
+      "opened_at": "2026-09-23T23:15:00Z",
+      "status": "resolved",
+      "priority": "P3",
+      "assignee": "jsmykowski",
+      "queue": "printers",
+      "assignee_email": "ntrent@initech.example",
+      "resolution_note": "replaced toner"
+     }
+    },
+    {
+     "id": "t-023",
+     "fields": {
+      "ticket_id": "INC-7123",
+      "opened_at": "2026-09-24T16:00:00Z",
+      "status": "pending",
+      "priority": "P2",
+      "assignee": "mbolton",
+      "queue": "payroll",
+      "resolution_note": ""
+     }
+    },
+    {
+     "id": "t-024",
+     "fields": {
+      "ticket_id": "INC-7124",
+      "opened_at": "2026-09-25T18:30:00Z",
+      "status": "resolved",
+      "priority": "P2",
+      "assignee": "slambert",
+      "queue": "payroll",
+      "assignee_email": null,
+      "resolution_note": null
+     }
+    },
+    {
+     "id": "t-025",
+     "fields": {
+      "ticket_id": "INC-7125",
+      "opened_at": "2026-09-26T16:15:00Z",
+      "status": "resolved",
+      "priority": "P1",
+      "assignee": "slambert",
+      "queue": "payroll",
+      "assignee_email": "plawrence@initech.example",
+      "resolution_note": "rebooted"
+     }
+    },
+    {
+     "id": "t-026",
+     "fields": {
+      "ticket_id": "INC-7126",
+      "opened_at": "2026-09-27T03:00:00Z",
+      "status": "open",
+      "priority": "P2",
+      "assignee": null,
+      "queue": "network",
+      "assignee_email": "mbolton@initech.example",
+      "resolution_note": "replaced toner"
+     }
+    },
+    {
+     "id": "t-027",
+     "fields": {
+      "ticket_id": "INC-7127",
+      "opened_at": "2026-09-28T05:30:00Z",
+      "status": "pending",
+      "priority": "P1",
+      "assignee": "mbolton",
+      "queue": "network",
+      "assignee_email": "ntrent@initech.example",
+      "resolution_note": ""
+     }
+    },
+    {
+     "id": "t-028",
+     "fields": {
+      "ticket_id": "INC-7128",
+      "opened_at": "2026-09-01T09:00:00Z",
+      "status": "closed",
+      "priority": "P3",
+      "assignee": "mbolton",
+      "queue": "payroll",
+      "assignee_email": "plawrence@initech.example",
+      "resolution_note": "replaced toner"
+     }
+    },
+    {
+     "id": "t-029",
+     "fields": {
+      "ticket_id": "INC-7129",
+      "opened_at": "2026-09-02T06:30:00Z",
+      "status": "pending",
+      "priority": "P4",
+      "assignee": "slambert",
+      "queue": "printers",
+      "assignee_email": "ntrent@initech.example",
+      "resolution_note": ""
+     }
+    },
+    {
+     "id": "t-030",
+     "fields": {
+      "ticket_id": "INC-7130",
+      "opened_at": "2026-09-03T03:15:00Z",
+      "status": "open",
+      "priority": null,
+      "assignee": "slambert",
+      "queue": "network",
+      "assignee_email": "ntrent@initech.example",
+      "resolution_note": "replaced toner"
+     }
+    },
+    {
+     "id": "t-031",
+     "fields": {
+      "ticket_id": "INC-7131",
+      "opened_at": "2026-09-04T23:30:00Z",
+      "status": "closed",
+      "priority": "P4",
+      "assignee": "plawrence",
+      "queue": "payroll",
+      "assignee_email": "mbolton@initech.example",
+      "resolution_note": "rebooted"
+     }
+    },
+    {
+     "id": "t-032",
+     "fields": {
+      "ticket_id": "INC-7132",
+      "opened_at": "2026-09-05T07:45:00Z",
+      "status": "open",
+      "priority": "P2",
+      "assignee": "jsmykowski",
+      "queue": "printers",
+      "assignee_email": "mbolton@initech.example",
+      "resolution_note": null
+     }
+    },
+    {
+     "id": "t-014",
+     "fields": {
+      "ticket_id": "INC-7114",
+      "opened_at": "2026-09-15T10:15:00Z",
+      "status": "open",
+      "assignee": "plawrence",
+      "queue": "facilities",
+      "assignee_email": "ntrent@initech.example",
+      "resolution_note": "replaced toner"
+     }
+    },
+    {
+     "id": "t-033",
+     "fields": {
+      "ticket_id": "INC-7133",
+      "opened_at": "2026-09-06T03:30:00Z",
+      "status": "open",
+      "priority": "P2",
+      "assignee": "mbolton",
+      "queue": "facilities",
+      "assignee_email": "mbolton@initech.example",
+      "resolution_note": ""
+     }
+    },
+    {
+     "id": "t-034",
+     "fields": {
+      "ticket_id": "INC-7134",
+      "opened_at": "2026-09-07T06:15:00Z",
+      "status": "pending",
+      "priority": "P3",
+      "assignee": "",
+      "queue": "network",
+      "assignee_email": "plawrence@initech.example",
+      "resolution_note": "duplicate"
+     }
+    },
+    {
+     "id": "t-035",
+     "fields": {
+      "ticket_id": "INC-7135",
+      "opened_at": "2026-09-08T19:15:00Z",
+      "status": "pending",
+      "priority": "P4",
+      "assignee": "mbolton",
+      "queue": "printers",
+      "resolution_note": "escalated"
+     }
+    },
+    {
+     "id": "t-036",
+     "fields": {
+      "ticket_id": "INC-7136",
+      "opened_at": "2026-09-09T16:00:00Z",
+      "status": "resolved",
+      "priority": "P3",
+      "assignee": "mbolton",
+      "queue": "facilities",
+      "assignee_email": "mbolton@initech.example",
+      "resolution_note": ""
+     }
+    },
+    {
+     "id": "t-037",
+     "fields": {
+      "ticket_id": "INC-7137",
+      "opened_at": "2026-09-10T00:45:00Z",
+      "status": "pending",
+      "priority": "P4",
+      "queue": "network",
+      "assignee_email": "ntrent@initech.example",
+      "resolution_note": "escalated"
+     }
+    },
+    {
+     "id": "t-038",
+     "fields": {
+      "ticket_id": "INC-7138",
+      "opened_at": "2026-09-11T23:30:00Z",
+      "status": "pending",
+      "priority": "P1",
+      "assignee": "plawrence",
+      "queue": "payroll",
+      "assignee_email": "ntrent@initech.example"
+     }
+    },
+    {
+     "id": "t-039",
+     "fields": {
+      "ticket_id": "INC-7139",
+      "opened_at": "2026-09-12T13:00:00Z",
+      "status": "open",
+      "priority": "P1",
+      "assignee": "plawrence",
+      "queue": "network",
+      "assignee_email": "plawrence@initech.example",
+      "resolution_note": "duplicate"
+     }
+    },
+    {
+     "id": "t-040",
+     "fields": {
+      "ticket_id": "INC-7140",
+      "opened_at": "2026-09-13T23:30:00Z",
+      "status": "pending",
+      "priority": "P3",
+      "assignee": "ntrent",
+      "queue": "printers",
+      "assignee_email": "plawrence@initech.example",
+      "resolution_note": ""
+     }
+    },
+    {
+     "id": "t-041",
+     "fields": {
+      "ticket_id": "INC-7141",
+      "opened_at": "2026-09-14T00:30:00Z",
+      "status": "open",
+      "priority": "P4",
+      "assignee": "ntrent",
+      "queue": "network",
+      "assignee_email": "plawrence@initech.example",
+      "resolution_note": "escalated"
+     }
+    },
+    {
+     "id": "t-042",
+     "fields": {
+      "ticket_id": "INC-7142",
+      "opened_at": "2026-09-15T01:45:00Z",
+      "status": "open",
+      "priority": "P2",
+      "assignee": "slambert",
+      "queue": "payroll",
+      "assignee_email": "ntrent@initech.example",
+      "resolution_note": "rebooted"
+     }
+    },
+    {
+     "id": "t-043",
+     "fields": {
+      "ticket_id": "INC-7143",
+      "opened_at": "2026-09-16T12:30:00Z",
+      "status": "resolved",
+      "priority": "P1",
+      "assignee": null,
+      "queue": "printers",
+      "assignee_email": "plawrence@initech.example",
+      "resolution_note": "duplicate"
+     }
+    },
+    {
+     "id": "t-044",
+     "fields": {
+      "ticket_id": "INC-7144",
+      "opened_at": "2026-09-17T06:15:00Z",
+      "status": "resolved",
+      "priority": "P2",
+      "assignee": "",
+      "assignee_email": "plawrence@initech.example"
+     }
+    },
+    {
+     "id": "t-045",
+     "fields": {
+      "ticket_id": "INC-7145",
+      "opened_at": "2026-09-18T18:30:00Z",
+      "status": "open",
+      "priority": "P4",
+      "assignee": "ntrent",
+      "queue": "printers",
+      "assignee_email": "mbolton@initech.example",
+      "resolution_note": "replaced toner"
+     }
+    },
+    {
+     "id": "t-046",
+     "fields": {
+      "ticket_id": "INC-7146",
+      "opened_at": "2026-09-19T03:15:00Z",
+      "status": "resolved",
+      "priority": "P3",
+      "assignee": "plawrence",
+      "queue": "facilities",
+      "assignee_email": "plawrence@initech.example",
+      "resolution_note": "escalated"
+     }
+    },
+    {
+     "id": "t-047",
+     "fields": {
+      "ticket_id": "INC-7147",
+      "opened_at": "2026-09-20T18:30:00Z",
+      "status": "closed",
+      "priority": "P3",
+      "assignee": "mbolton",
+      "queue": "network",
+      "resolution_note": "duplicate"
+     }
+    },
+    {
+     "id": "t-048",
+     "fields": {
+      "ticket_id": "INC-7148",
+      "status": "resolved",
+      "priority": "",
+      "assignee": "plawrence",
+      "queue": "payroll",
+      "assignee_email": "",
+      "resolution_note": "duplicate"
+     }
+    },
+    {
+     "id": "t-049",
+     "fields": {
+      "ticket_id": "INC-7149",
+      "opened_at": "2026-09-22T11:30:00Z",
+      "status": "pending",
+      "priority": "P1",
+      "assignee": "jsmykowski",
+      "queue": "payroll",
+      "assignee_email": "plawrence@initech.example",
+      "resolution_note": null
+     }
+    },
+    {
+     "id": "t-050",
+     "fields": {
+      "ticket_id": "INC-7150",
+      "opened_at": "2026-09-23T13:45:00Z",
+      "status": "closed",
+      "priority": "P2",
+      "assignee": "jsmykowski",
+      "queue": "printers",
+      "assignee_email": "plawrence@initech.example",
+      "resolution_note": "replaced toner"
+     }
+    },
+    {
+     "id": "t-051",
+     "fields": {
+      "ticket_id": "INC-7151",
+      "opened_at": "2026-09-24T14:00:00Z",
+      "status": "resolved",
+      "priority": "P1",
+      "assignee": "plawrence",
+      "queue": "printers",
+      "assignee_email": "plawrence@initech.example",
+      "resolution_note": ""
+     }
+    },
+    {
+     "id": "t-052",
+     "fields": {
+      "ticket_id": "INC-7152",
+      "opened_at": "2026-09-25T03:30:00Z",
+      "status": "resolved",
+      "priority": "P1",
+      "assignee": "jsmykowski",
+      "queue": "network",
+      "assignee_email": null,
+      "resolution_note": "duplicate"
+     }
+    },
+    {
+     "id": "t-053",
+     "fields": {
+      "ticket_id": "INC-7153",
+      "opened_at": "2026-09-26T13:30:00Z",
+      "status": "resolved",
+      "priority": "P3",
+      "assignee": "mbolton",
+      "queue": "printers",
+      "assignee_email": null
+     }
+    },
+    {
+     "id": "t-054",
+     "fields": {
+      "ticket_id": "INC-7154",
+      "opened_at": null,
+      "status": "pending",
+      "priority": "P2",
+      "assignee": "plawrence",
+      "queue": null,
+      "assignee_email": "plawrence@initech.example",
+      "resolution_note": "replaced toner"
+     }
+    },
+    {
+     "id": "t-055",
+     "fields": {
+      "ticket_id": "INC-7155",
+      "opened_at": "2026-09-28T15:30:00Z",
+      "status": "closed",
+      "priority": "P2",
+      "queue": "payroll",
+      "assignee_email": "ntrent@initech.example",
+      "resolution_note": "rebooted"
+     }
+    },
+    {
+     "id": "t-056",
+     "fields": {
+      "ticket_id": "INC-7156",
+      "opened_at": "2026-09-01T21:45:00Z",
+      "status": "resolved",
+      "priority": "P1",
+      "assignee": "mbolton",
+      "queue": "network",
+      "assignee_email": "mbolton@initech.example",
+      "resolution_note": "rebooted"
+     }
+    },
+    {
+     "id": "t-002",
+     "fields": {
+      "ticket_id": "INC-7102",
+      "opened_at": "2026-09-03T13:00:00Z",
+      "status": "pending",
+      "priority": "P3",
+      "assignee": "jsmykowski",
+      "queue": "payroll",
+      "assignee_email": null,
+      "resolution_note": ""
+     }
+    },
+    {
+     "id": "t-057",
+     "fields": {
+      "ticket_id": "INC-7157",
+      "opened_at": "2026-09-02T10:30:00Z",
+      "status": "pending",
+      "priority": "P4",
+      "assignee": "jsmykowski",
+      "queue": "network",
+      "assignee_email": "plawrence@initech.example",
+      "resolution_note": "escalated"
+     }
+    },
+    {
+     "id": "t-058",
+     "fields": {
+      "ticket_id": "INC-7158",
+      "opened_at": "2026-09-03T10:45:00Z",
+      "status": "pending",
+      "priority": "P1",
+      "assignee": "ntrent",
+      "queue": "payroll",
+      "assignee_email": "mbolton@initech.example",
+      "resolution_note": "escalated"
+     }
+    },
+    {
+     "id": "t-006",
+     "fields": {
+      "ticket_id": "INC-7106",
+      "opened_at": "2026-09-07T05:45:00Z",
+      "status": "closed",
+      "priority": "P1",
+      "assignee": "slambert",
+      "assignee_email": "mbolton@initech.example"
+     }
+    }
+   ]
+  },
+  {
+   "id": "umbrella-trials",
+   "name": "Umbrella Corp: clinical trial sites",
+   "credential_ref": "CONNECT_REPORT_UMBRELLA_API_KEY",
+   "listed_refs": [
+    "CONNECT_REPORT_UMBRELLA_TOKEN",
+    "CONNECT_REPORT_UMBRELLA_READONLY_KEY",
+    "CONNECT_REPORT_UMBRELLA_API_KEY"
+   ],
+   "required_fields": [
+    "site_id",
+    "country",
+    "enrolled"
+   ],
+   "records": []
+  },
+  {
+   "id": "hooli-events",
+   "name": "Hooli: campus events",
+   "credential_ref": "CONNECT_REPORT_HOOLI_API_KEY",
+   "listed_refs": [
+    "CONNECT_REPORT_HOOLI_API_KEY"
+   ],
+   "required_fields": [
+    "event_id",
+    "venue",
+    "starts_at",
+    "capacity",
+    "organizer"
+   ],
+   "flaky_connect": true,
+   "records": [
+    {
+     "id": "e-001",
+     "fields": {
+      "event_id": "EV-301",
+      "venue": "Rooftop",
+      "starts_at": "2026-11-02T14:00:00Z",
+      "capacity": "250",
+      "organizer": "dchugtai",
+      "venue_notes": null
+     }
+    },
+    {
+     "id": "e-002",
+     "fields": {
+      "event_id": "EV-302",
+      "venue": "Hall B",
+      "starts_at": "2026-11-03T11:00:00Z",
+      "organizer": "gbelson",
+      "venue_notes": "no catering"
+     }
+    },
+    {
+     "id": "e-003",
+     "fields": {
+      "event_id": "EV-303",
+      "venue": "Rooftop",
+      "starts_at": "2026-11-04T11:00:00Z",
+      "capacity": "80",
+      "organizer": "bgilfoyle",
+      "venue_notes": "AV booked"
+     }
+    },
+    {
+     "id": "e-004",
+     "fields": {
+      "event_id": "EV-304",
+      "starts_at": "2026-11-05T12:00:00Z",
+      "capacity": "250",
+      "organizer": "gbelson",
+      "venue_notes": null
+     }
+    },
+    {
+     "id": "e-005",
+     "fields": {
+      "event_id": "EV-305",
+      "venue": "Rooftop",
+      "starts_at": "2026-11-06T15:00:00Z",
+      "capacity": "250",
+      "organizer": "rhendricks",
+      "venue_notes": "step-free access"
+     }
+    },
+    {
+     "id": "e-006",
+     "fields": {
+      "event_id": "EV-306",
+      "venue": "Auditorium",
+      "starts_at": "2026-11-07T13:00:00Z",
+      "capacity": "80",
+      "organizer": "dchugtai",
+      "venue_notes": "step-free access"
+     }
+    },
+    {
+     "id": "e-007",
+     "fields": {
+      "event_id": "EV-307",
+      "venue": null,
+      "starts_at": "2026-11-08T11:00:00Z",
+      "capacity": "80",
+      "organizer": "gbelson",
+      "venue_notes": "AV booked"
+     }
+    },
+    {
+     "id": "e-008",
+     "fields": {
+      "event_id": "EV-308",
+      "venue": "Hall A",
+      "starts_at": "2026-11-09T09:00:00Z",
+      "capacity": "500",
+      "organizer": "dchugtai",
+      "venue_notes": "no catering"
+     }
+    },
+    {
+     "id": "e-009",
+     "fields": {
+      "event_id": "EV-309",
+      "venue": "Auditorium",
+      "starts_at": "2026-11-10T10:00:00Z",
+      "capacity": "120",
+      "organizer": "bgilfoyle",
+      "venue_notes": "step-free access"
+     }
+    },
+    {
+     "id": "e-010",
+     "fields": {
+      "event_id": "EV-310",
+      "venue": "Hall B",
+      "starts_at": "2026-11-11T15:00:00Z",
+      "capacity": "80",
+      "organizer": "rhendricks",
+      "venue_notes": "step-free access"
+     }
+    },
+    {
+     "id": "e-011",
+     "fields": {
+      "event_id": "EV-311",
+      "venue": "Rooftop",
+      "starts_at": "2026-11-12T13:00:00Z",
+      "capacity": "250",
+      "organizer": "rhendricks",
+      "venue_notes": "no catering"
+     }
+    },
+    {
+     "id": "e-012",
+     "fields": {
+      "event_id": "EV-312",
+      "venue": "Hall B",
+      "starts_at": "2026-11-13T15:00:00Z",
+      "capacity": "80",
+      "organizer": "rhendricks",
+      "venue_notes": ""
+     }
+    },
+    {
+     "id": "e-013",
+     "fields": {
+      "event_id": "EV-313",
+      "venue": "Rooftop",
+      "starts_at": "2026-11-14T09:00:00Z",
+      "capacity": "250",
+      "organizer": "bgilfoyle",
+      "venue_notes": "no catering"
+     }
+    },
+    {
+     "id": "e-014",
+     "fields": {
+      "event_id": "EV-314",
+      "venue": "",
+      "starts_at": "2026-11-15T14:00:00Z",
+      "capacity": "500",
+      "organizer": "gbelson",
+      "venue_notes": "no catering"
+     }
+    },
+    {
+     "id": "e-015",
+     "fields": {
+      "event_id": "EV-315",
+      "venue": "Auditorium",
+      "starts_at": "2026-11-16T09:00:00Z",
+      "capacity": "40",
+      "organizer": "rhendricks",
+      "venue_notes": null
+     }
+    },
+    {
+     "id": "e-016",
+     "fields": {
+      "event_id": "EV-316",
+      "venue": "Hall B",
+      "starts_at": "2026-11-17T17:00:00Z",
+      "capacity": null,
+      "organizer": "dchugtai",
+      "venue_notes": null
+     }
+    },
+    {
+     "id": "e-017",
+     "fields": {
+      "event_id": "EV-317",
+      "venue": "Auditorium",
+      "starts_at": "2026-11-18T10:00:00Z",
+      "capacity": "250",
+      "organizer": "gbelson",
+      "venue_notes": "no catering"
+     }
+    },
+    {
+     "id": "e-018",
+     "fields": {
+      "event_id": "EV-318",
+      "venue": "Hall B",
+      "starts_at": "2026-11-19T17:00:00Z",
+      "capacity": "120",
+      "organizer": "gbelson",
+      "venue_notes": ""
+     }
+    },
+    {
+     "id": "e-019",
+     "fields": {
+      "event_id": "EV-319",
+      "venue": "Hall B",
+      "starts_at": "2026-11-20T11:00:00Z",
+      "capacity": "80",
+      "organizer": "dchugtai",
+      "venue_notes": "AV booked"
+     }
+    },
+    {
+     "id": "e-020",
+     "fields": {
+      "event_id": "EV-320",
+      "venue": "Hall B",
+      "starts_at": "2026-11-21T14:00:00Z",
+      "capacity": "250",
+      "organizer": "dchugtai",
+      "venue_notes": "no catering"
+     }
+    },
+    {
+     "id": "e-021",
+     "fields": {
+      "event_id": "EV-321",
+      "venue": "Hall B",
+      "starts_at": "2026-11-22T15:00:00Z",
+      "capacity": "120",
+      "organizer": "dchugtai",
+      "venue_notes": "step-free access"
+     }
+    },
+    {
+     "id": "e-022",
+     "fields": {
+      "event_id": "EV-322",
+      "venue": "Hall A",
+      "starts_at": "2026-11-23T10:00:00Z",
+      "capacity": "80",
+      "venue_notes": "step-free access"
+     }
+    },
+    {
+     "id": "e-023",
+     "fields": {
+      "event_id": "EV-323",
+      "venue": "Hall A",
+      "starts_at": "2026-11-24T14:00:00Z",
+      "capacity": "500",
+      "organizer": "dchugtai",
+      "venue_notes": "no catering"
+     }
+    },
+    {
+     "id": "e-024",
+     "fields": {
+      "event_id": "EV-324",
+      "venue": "Hall B",
+      "starts_at": "2026-11-25T12:00:00Z",
+      "capacity": "500",
+      "organizer": "bgilfoyle",
+      "venue_notes": "AV booked"
+     }
+    },
+    {
+     "id": "e-025",
+     "fields": {
+      "event_id": "EV-325",
+      "venue": "Hall A",
+      "starts_at": "2026-11-26T13:00:00Z",
+      "capacity": "",
+      "organizer": "bgilfoyle",
+      "venue_notes": "no catering"
+     }
+    },
+    {
+     "id": "e-026",
+     "fields": {
+      "event_id": "EV-326",
+      "venue": "Hall B",
+      "starts_at": "2026-11-27T15:00:00Z",
+      "organizer": "dchugtai",
+      "venue_notes": null
+     }
+    },
+    {
+     "id": "e-027",
+     "fields": {
+      "event_id": "EV-327",
+      "venue": "Hall B",
+      "starts_at": "2026-11-28T12:00:00Z",
+      "capacity": "500",
+      "organizer": "gbelson",
+      "venue_notes": null
+     }
+    },
+    {
+     "id": "e-028",
+     "fields": {
+      "event_id": "EV-328",
+      "venue": "Hall B",
+      "starts_at": "2026-11-29T12:00:00Z",
+      "capacity": null,
+      "organizer": "dchugtai",
+      "venue_notes": ""
+     }
+    },
+    {
+     "id": "e-029",
+     "fields": {
+      "event_id": "EV-329",
+      "venue": "Hall B",
+      "starts_at": "2026-11-30T13:00:00Z",
+      "capacity": "500",
+      "organizer": "gbelson",
+      "venue_notes": "no catering"
+     }
+    },
+    {
+     "id": "e-030",
+     "fields": {
+      "event_id": "EV-330",
+      "venue": "Rooftop",
+      "starts_at": "2026-11-01T13:00:00Z",
+      "capacity": "120",
+      "organizer": "rhendricks",
+      "venue_notes": "AV booked"
+     }
+    },
+    {
+     "id": "e-021",
+     "fields": {
+      "event_id": "EV-321",
+      "venue": "Hall B",
+      "starts_at": "2026-11-22T15:00:00Z",
+      "capacity": "120",
+      "organizer": "dchugtai",
+      "venue_notes": "step-free access"
+     }
+    },
+    {
+     "id": "e-031",
+     "fields": {
+      "event_id": "EV-331",
+      "venue": "Hall A",
+      "starts_at": "2026-11-02T17:00:00Z",
+      "capacity": "",
+      "organizer": "bgilfoyle",
+      "venue_notes": "no catering"
+     }
+    },
+    {
+     "id": "e-032",
+     "fields": {
+      "event_id": "EV-332",
+      "venue": "Rooftop",
+      "starts_at": "2026-11-03T16:00:00Z",
+      "capacity": "40",
+      "organizer": "rhendricks",
+      "venue_notes": null
+     }
+    },
+    {
+     "id": "e-033",
+     "fields": {
+      "event_id": "EV-333",
+      "starts_at": "2026-11-04T12:00:00Z",
+      "capacity": "40",
+      "organizer": "gbelson",
+      "venue_notes": "step-free access"
+     }
+    },
+    {
+     "id": "e-034",
+     "fields": {
+      "event_id": "EV-334",
+      "venue": "Hall B",
+      "starts_at": "2026-11-05T16:00:00Z",
+      "capacity": "250",
+      "organizer": "gbelson",
+      "venue_notes": "AV booked"
+     }
+    },
+    {
+     "id": "e-035",
+     "fields": {
+      "event_id": "EV-335",
+      "venue": "Auditorium",
+      "starts_at": "2026-11-06T17:00:00Z",
+      "capacity": "250",
+      "organizer": "bgilfoyle",
+      "venue_notes": "step-free access"
+     }
+    },
+    {
+     "id": "e-036",
+     "fields": {
+      "event_id": "EV-336",
+      "venue": "Auditorium",
+      "starts_at": "2026-11-07T13:00:00Z",
+      "capacity": "250",
+      "organizer": "rhendricks",
+      "venue_notes": null
+     }
+    },
+    {
+     "id": "e-037",
+     "fields": {
+      "event_id": "EV-337",
+      "venue": "Auditorium",
+      "starts_at": "2026-11-08T12:00:00Z",
+      "capacity": "120",
+      "organizer": "bgilfoyle",
+      "venue_notes": ""
+     }
+    }
+   ]
+  },
+  {
+   "id": "stark-assets",
+   "name": "Stark Industries: equipment register",
+   "credential_ref": "CONNECT_REPORT_SHARED_PARTNER_KEY",
+   "listed_refs": [
+    "CONNECT_REPORT_STARK_API_KEY",
+    "CONNECT_REPORT_SHARED_PARTNER_KEY"
+   ],
+   "required_fields": [
+    "asset_tag",
+    "model",
+    "location",
+    "purchased_on"
+   ],
+   "records": [
+    {
+     "id": "a-001",
+     "fields": {
+      "asset_tag": "SI-20407",
+      "model": "Mk III",
+      "location": "Stark Tower",
+      "purchased_on": "2022-09-15",
+      "warranty_until": "2026-03-01"
+     }
+    },
+    {
+     "id": "a-002",
+     "fields": {
+      "asset_tag": "SI-20414",
+      "model": "Mk II",
+      "location": "Long Island",
+      "purchased_on": "2023-01-17",
+      "warranty_until": ""
+     }
+    },
+    {
+     "id": "a-003",
+     "fields": {
+      "asset_tag": "SI-20421",
+      "model": "Mk V",
+      "location": "Queens",
+      "purchased_on": "2024-07-17",
+      "warranty_until": ""
+     }
+    },
+    {
+     "id": "a-004",
+     "fields": {
+      "asset_tag": "SI-20428",
+      "model": "Mk VII",
+      "location": "Long Island",
+      "purchased_on": "2023-05-25",
+      "warranty_until": null
+     }
+    },
+    {
+     "id": "a-005",
+     "fields": {
+      "asset_tag": "SI-20435",
+      "location": "Queens",
+      "purchased_on": "2022-02-06",
+      "warranty_until": "2026-05-01"
+     }
+    },
+    {
+     "id": "a-006",
+     "fields": {
+      "asset_tag": "SI-20442",
+      "model": "Mk VII",
+      "location": "Malibu",
+      "purchased_on": "2021-07-09"
+     }
+    },
+    {
+     "id": "a-007",
+     "fields": {
+      "asset_tag": "SI-20449",
+      "model": "Mk II",
+      "location": "Malibu",
+      "warranty_until": "2030-06-01"
+     }
+    },
+    {
+     "id": "a-008",
+     "fields": {
+      "asset_tag": "SI-20456",
+      "model": "Mk II",
+      "location": "Stark Tower",
+      "purchased_on": "2021-05-15",
+      "warranty_until": "2026-01-01"
+     }
+    },
+    {
+     "id": "a-009",
+     "fields": {
+      "asset_tag": "SI-20463",
+      "model": "Mk VII",
+      "location": "Malibu",
+      "purchased_on": "2021-08-05",
+      "warranty_until": "2026-02-01"
+     }
+    },
+    {
+     "id": "a-010",
+     "fields": {
+      "asset_tag": "SI-20470",
+      "model": "Mk III",
+      "location": "Long Island",
+      "purchased_on": "2018-05-05",
+      "warranty_until": "2028-09-01"
+     }
+    },
+    {
+     "id": "a-011",
+     "fields": {
+      "asset_tag": "SI-20477",
+      "model": null,
+      "location": "Long Island",
+      "purchased_on": "2024-06-26",
+      "warranty_until": "2029-10-01"
+     }
+    },
+    {
+     "id": "a-012",
+     "fields": {
+      "asset_tag": "SI-20484",
+      "model": "Mk II",
+      "location": "Stark Tower",
+      "purchased_on": "2022-12-07",
+      "warranty_until": "2030-03-01"
+     }
+    },
+    {
+     "id": "a-013",
+     "fields": {
+      "asset_tag": "SI-20491",
+      "model": "Mk V",
+      "location": "Malibu",
+      "purchased_on": "2018-06-16",
+      "warranty_until": "2029-12-01"
+     }
+    },
+    {
+     "id": "a-014",
+     "fields": {
+      "asset_tag": "SI-20498",
+      "model": "Mk VII",
+      "location": "Malibu",
+      "purchased_on": "2018-02-01",
+      "warranty_until": "2030-01-01"
+     }
+    },
+    {
+     "id": "a-015",
+     "fields": {
+      "asset_tag": "SI-20505",
+      "model": "Mk VII",
+      "location": "Queens",
+      "purchased_on": "2018-07-09",
+      "warranty_until": "2026-03-01"
+     }
+    },
+    {
+     "id": "a-016",
+     "fields": {
+      "asset_tag": "SI-20512",
+      "model": "Mk VII",
+      "location": "Long Island",
+      "purchased_on": "2021-01-20",
+      "warranty_until": ""
+     }
+    },
+    {
+     "id": "a-017",
+     "fields": {
+      "asset_tag": "SI-20519",
+      "model": "Mk V",
+      "location": "Long Island",
+      "purchased_on": "2021-06-18"
+     }
+    },
+    {
+     "id": "a-018",
+     "fields": {
+      "asset_tag": "SI-20526",
+      "model": "Mk V",
+      "location": "Stark Tower",
+      "purchased_on": null,
+      "warranty_until": "2026-07-01"
+     }
+    },
+    {
+     "id": "a-019",
+     "fields": {
+      "asset_tag": "SI-20533",
+      "model": "Mk VII",
+      "location": "Long Island",
+      "purchased_on": "2020-09-22",
+      "warranty_until": "2029-12-01"
+     }
+    },
+    {
+     "id": "a-020",
+     "fields": {
+      "asset_tag": "SI-20540",
+      "model": "Mk II",
+      "location": "Long Island",
+      "purchased_on": "2021-11-02",
+      "warranty_until": null
+     }
+    },
+    {
+     "id": "a-021",
+     "fields": {
+      "asset_tag": "SI-20547",
+      "model": "Mk V",
+      "location": "Malibu",
+      "purchased_on": "2020-05-08",
+      "warranty_until": "2030-01-01"
+     }
+    },
+    {
+     "id": "a-022",
+     "fields": {
+      "asset_tag": "SI-20554",
+      "model": "Mk III",
+      "location": "Stark Tower",
+      "purchased_on": "2018-04-14",
+      "warranty_until": "2028-08-01"
+     }
+    },
+    {
+     "id": "a-023",
+     "fields": {
+      "asset_tag": "SI-20561",
+      "model": "Mk V",
+      "location": "Malibu",
+      "purchased_on": "2018-03-28",
+      "warranty_until": "2029-05-01"
+     }
+    },
+    {
+     "id": "a-024",
+     "fields": {
+      "asset_tag": "SI-20568",
+      "model": "Mk VII",
+      "location": "Queens",
+      "purchased_on": "2018-10-28",
+      "warranty_until": "2029-01-01"
+     }
+    },
+    {
+     "id": "a-025",
+     "fields": {
+      "asset_tag": "SI-20575",
+      "model": "Mk III",
+      "location": "Long Island",
+      "purchased_on": "",
+      "warranty_until": "2027-08-01"
+     }
+    },
+    {
+     "id": "a-026",
+     "fields": {
+      "asset_tag": "SI-20582",
+      "model": "Mk VII",
+      "location": "Long Island",
+      "purchased_on": "2023-11-14",
+      "warranty_until": ""
+     }
+    }
+   ]
+  },
+  {
+   "id": "wayne-ledger",
+   "name": "Wayne Enterprises: general ledger",
+   "credential_ref": "CONNECT_REPORT_WAYNE_LEDGER_KEY",
+   "listed_refs": [
+    "CONNECT_REPORT_SHARED_PARTNER_KEY",
+    "CONNECT_REPORT_WAYNE_ARCHIVE_KEY",
+    "CONNECT_REPORT_WAYNE_LEDGER_KEY"
+   ],
+   "required_fields": [
+    "entry_id",
+    "account",
+    "amount"
+   ],
+   "records": []
+  },
+  {
+   "id": "vandelay-imports",
+   "name": "Vandelay Industries: import shipments",
+   "credential_ref": "CONNECT_REPORT_VANDELAY_API_KEY",
+   "listed_refs": [
+    "CONNECT_REPORT_VANDELAY_API_KEY"
+   ],
+   "required_fields": [
+    "shipment_id",
+    "origin",
+    "declared_value"
+   ],
+   "records": []
+  },
+  {
+   "id": "soylent-orders",
+   "name": "Soylent Corp: wholesale orders",
+   "credential_ref": "CONNECT_REPORT_SOYLENT_API_KEY",
+   "listed_refs": [
+    "CONNECT_REPORT_SOYLENT_API_KEY"
+   ],
+   "required_fields": [
+    "order_id",
+    "customer",
+    "quantity"
+   ],
+   "records": []
+  },
+  {
+   "id": "umbrella-archive",
+   "name": "Umbrella Corp: archived trials",
+   "credential_ref": "CONNECT_REPORT_UMBRELLA_READONLY_KEY",
+   "listed_refs": [
+    "CONNECT_REPORT_UMBRELLA_READONLY_KEY"
+   ],
+   "required_fields": [
+    "site_id",
+    "country"
+   ],
+   "records": []
+  },
+  {
+   "id": "initech-archive",
+   "name": "Initech: closed tickets archive",
+   "credential_ref": "CONNECT_REPORT_INITECH_API_KEY",
+   "listed_refs": [
+    "CONNECT_REPORT_INITECH_API_KEY",
+    "CONNECT_REPORT_INITECH_KEY_V1"
+   ],
+   "required_fields": [
+    "ticket_id",
+    "status"
+   ],
+   "records": []
   }
  ]
 }

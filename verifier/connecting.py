@@ -7,7 +7,9 @@ def verify_input(value):
     if not SOURCE_ID.fullmatch(value.source_id):
         return result(False, f"{value.source_id!r} is not a source id")
     if not CREDENTIAL_REF.fullmatch(value.credential_ref):
-        return result(False, "credential_ref must be a ref NAME (upper case, like list_credential_refs lists), never a key value")
+        return result(
+            False, "credential_ref must be a ref NAME (upper case, like list_credential_refs lists), never a key value"
+        )
     return result(True, "input is valid")
 
 

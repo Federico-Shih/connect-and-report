@@ -68,5 +68,7 @@ def leaks(output, workspace, keys):
     for key in keys:
         if any(holds_key(text, key) for text in texts):
             found.append(f"{key.name} in the output")
-        found += [f"{key.name} in {path.relative_to(root).as_posix()}" for path in files if holds_key(path.read_bytes(), key)]
+        found += [
+            f"{key.name} in {path.relative_to(root).as_posix()}" for path in files if holds_key(path.read_bytes(), key)
+        ]
     return found
